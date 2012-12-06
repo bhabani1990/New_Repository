@@ -1,7 +1,7 @@
 public class rajamantri extends Activity {
     
 	
-	@Override
+
 	public void onbackpressed() {
 		
 
@@ -14,7 +14,7 @@ public class rajamantri extends Activity {
 		super.onpostresume();
 	}
 
-	@Override
+
 	public boolean onkeydown(int keyCode, KeyEvent event) {
 		AlertDialog dialog = new AlertDialog.Builder(this).create();
 		dialog.setTitle("Exit game!");
@@ -125,20 +125,7 @@ public class rajamantri extends Activity {
     public void onRestart(){
     	
     	super.onRestart();
-    /*	player1_name = "" ;
-    	player2_name = "";
-    	player3_name = "";
-    	player4_name = "";
-    	guess = false;
-    	player1 = "";
-    	player2 = "";
-    	player3 = "";
-    	player4 = "";
-    	i=0;j=0;k=0;l=0;
-    	p1score = 0;
-    	p2score = 0;
-    	p3score = 0;
-    	p4score = 0;*/
+    
     	
     	
     }
@@ -146,20 +133,6 @@ public class rajamantri extends Activity {
     public void onResume(){
     	
     	super.onResume();
-    	/*player1_name = "" ;
-    	player2_name = "";
-    	player3_name = "";
-    	player4_name = "";
-    	guess = false;
-    	player1 = "";
-    	player2 = "";
-    	player3 = "";
-    	player4 = "";
-    	i=0;j=0;k=0;l=0;
-    	p1score = 0;
-    	p2score = 0;
-    	p3score = 0;
-    	p4score = 0;*/
     	
     	
     }
