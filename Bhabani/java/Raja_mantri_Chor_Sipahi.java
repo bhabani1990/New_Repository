@@ -8,7 +8,7 @@ public class rajamantri extends Activity {
 		
 	}
 
-	@Override
+
 	protected void onpostresume() {
 		// TODO Auto-generated method stub
 		super.onpostresume();
@@ -40,13 +40,13 @@ public class rajamantri extends Activity {
 	}
 
 	@Override
-	public void onlowmemory() {
+	public void onLowmemory() {
 		AlertDialog dialog = new AlertDialog.Builder(this).create();
 		dialog.setTitle("Low memory!");
 		dialog.setMessage("Too many apps open, kindly close some other apps and try again!");
 		dialog.setButton("Exit", new DialogInterface.OnClickListener() {
 			
-			public void onClick(DialogInterface dialog, int which) {
+	public void onClick(DialogInterface dialog, int which) {
 				
 				finish();
 				
@@ -59,7 +59,7 @@ public class rajamantri extends Activity {
 		super.onLowMemory();
 	}
 
-	@Override
+
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
@@ -81,10 +81,10 @@ public class rajamantri extends Activity {
 	static String player3 = "";
 	static String player4 = "";
 	static int i=0,j=0,k=0,l=0;
-	static int p1score = 0;
-	static int p2score = 0;
-	static int p3score = 0;
-	static int p4score = 0;
+	static int p1_score = 0;
+	static int p2_score = 0;
+	static int p3_score = 0;
+	static int p4_score = 0;
 	int count = 0;
 	
 	Button btnRajaMantri;
@@ -160,25 +160,25 @@ public class rajamantri extends Activity {
 			    LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayoutHelp);
 			    // Add the adView to it
 			    layout.addView(adView);
-			    // Initiate a generic request to load it with an ad
+	// Initiate a generic request to load it with an ad
 			    adView.loadAd(new AdRequest());
-				TextView txtHelp = (TextView)findViewById(R.id.txtHelp);
-				String text = "Welcome to nostalgia! This is the paper free version of Raja Mantri Chor Sipahi.\n\nThe game involves bluffing with facial expressions and good guessing. This is a very popular childhood game in India played among kids often during their long summer vacations.\n\nThe game has 4 paper chits with Chor (thief), Sipahi (police), Raja (king) and Mantri (minister). The chits are folded at the start of the game and one of the 4 players will press SHUFFLE each one of the four players is supposed to secretly (by taking the phone and not letting the others see it)pick one chit by clicking on it, the player then clicks on the chit again to fold it back. All the players will then secretly open their chits and read what they have got. \n\nThe player who gets the chit with Raja written on it will say MERA MANTRI KAUN? (Who is my minister?). The player who got the chit with Mantri will say MEIN! (Me), The player with Raja will then say CHOR SIPAHI KA PATA LAGAO (find out who is the theif and who is the soldier). The player with Mantri will then guess who is the Chor (Thief), if he is wrong then his points are deducted and if he is correct he gets more points and the points from the player who got Chor (Thief) are deducted.\n\nIf the guess is correct the player with Chor is wrapped on his wrist by the Mantri, and if the Mantri is wrong then the Chor gets to hit his wrist.";
+	TextView txtHelp = (TextView)findViewById(R.id.txtHelp);
+String text = "Welcome to nostalgia! This is the paper free version of Raja Mantri Chor Sipahi.\n\nThe game involves bluffing with facial expressions and good guessing. This is a very popular childhood game in India played among kids often during their long summer vacations.\n\nThe game has 4 paper chits with Chor (thief), Sipahi (police), Raja (king) and Mantri (minister). The chits are folded at the start of the game and one of the 4 players will press SHUFFLE each one of the four players is supposed to secretly (by taking the phone and not letting the others see it)pick one chit by clicking on it, the player then clicks on the chit again to fold it back. All the players will then secretly open their chits and read what they have got. \n\nThe player who gets the chit with Raja written on it will say MERA MANTRI KAUN? (Who is my minister?). The player who got the chit with Mantri will say MEIN! (Me), The player with Raja will then say CHOR SIPAHI KA PATA LAGAO (find out who is the theif and who is the soldier). The player with Mantri will then guess who is the Chor (Thief), if he is wrong then his points are deducted and if he is correct he gets more points and the points from the player who got Chor (Thief) are deducted.\n\nIf the guess is correct the player with Chor is wrapped on his wrist by the Mantri, and if the Mantri is wrong then the Chor gets to hit his wrist.";
 				txtHelp.setText(text);
-				Button btnBack = (Button)findViewById(R.id.btnMainMenuHelp);
-				btnBack.setOnClickListener(new OnClickListener() {
+Button btnBack = (Button)findViewById(R.id.btnMainMenuHelp);
+		btnBack.setOnClickListener(new OnClickListener() {
 					
-					public void onClick(View v) {
+	public void onClick(View v) {
 						
-						Intent i = new Intent(RajaMantri.this, RajaMantri.class);
-						RajaMantri.this.startActivity(i);
-						finish();
+	 Intent i = new Intent(RajaMantri.this, RajaMantri.class);
+	RajaMantri.this.startActivity(i);
+			finish();
 						
 					}
 				});
 			}
 		});
-        btnRajaMantri = (Button) findViewById(R.id.btnRajaMantri);
+        btnRajaMantri = (Button)findViewById(R.id.btnRajaMantri);
         btnRajaMantri.setOnClickListener(new OnClickListener() {
         	
  		public void onClick(View v) {
@@ -194,17 +194,17 @@ public class rajamantri extends Activity {
 	    // Initiate a generic request to load it with an ad
 	    adView.loadAd(new AdRequest());
 	    
- 		editTxtPlayer1 = (EditText) findViewById(R.id.editTxtPlayer1);
- 		editTxtPlayer2 = (EditText)findViewById(R.id.editTxtPlayer2);
- 		editTxtPlayer3 = (EditText)findViewById(R.id.editTxtPlayer3);
- 		editTxtPlayer4 = (EditText)findViewById(R.id.editTxtPlayer4);
+ editTxtPlayer1 = (EditText) findViewById(R.id.editTxtPlayer1);
+ editTxtPlayer2 = (EditText)findViewById(R.id.editTxtPlayer2);
+ editTxtPlayer3 = (EditText)findViewById(R.id.editTxtPlayer3);
+ editTxtPlayer4 = (EditText)findViewById(R.id.editTxtPlayer4);
  		
- 		lblPlayer1 = (TextView) findViewById(R.id.lblPlayer1);
- 		lblPlayer2 = (TextView) findViewById(R.id.lblPlayer2);
- 		lblPlayer3 = (TextView) findViewById(R.id.lblPlayer3);
- 		lblPlayer4 = (TextView) findViewById(R.id.lblPlayer4);
+ lblPlayer1 = (TextView) findViewById(R.id.lblPlayer1);
+ lblPlayer2 = (TextView) findViewById(R.id.lblPlayer2);
+ lblPlayer3 = (TextView) findViewById(R.id.lblPlayer3);
+ lblPlayer4 = (TextView) findViewById(R.id.lblPlayer4);
  		
- 		Display display = getWindowManager().getDefaultDisplay(); 
+ Display display = getWindowManager().getDefaultDisplay(); 
  		int width = display.getWidth();
  		int height = display.getHeight();
  		
@@ -221,13 +221,13 @@ public class rajamantri extends Activity {
  		Log.v("AkandBakar", "Playernames:" + player3_name);
  		Log.v("AkandBakar", "Playernames:" + player4_name);
  		
- 		btnMainMenu = (Button) findViewById(R.id.btnMainMenu);
- 		btnMainMenu.setOnClickListener(new OnClickListener() {
+ 	btnMainMenu = (Button) findViewById(R.id.btnMainMenu);
+ 	btnMainMenu.setOnClickListener(new OnClickListener() {
 			
 			
 			public void onClick(View v) {
-				Intent i = new Intent(RajaMantri.this, RajaMantri.class);
-				RajaMantri.this.startActivity(i);
+	Intent i = new Intent(RajaMantri.this, RajaMantri.class);
+	RajaMantri.this.startActivity(i);
 				finish();
 				
 			}
@@ -239,24 +239,27 @@ public class rajamantri extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				player1_name = editTxtPlayer1.getText().toString();
-		 		player2_name = editTxtPlayer2.getText().toString();
-		 		player3_name = editTxtPlayer3.getText().toString();
-		 		player4_name = editTxtPlayer4.getText().toString();
+player1_name = editTxtPlayer1.getText().toString();
+player2_name = editTxtPlayer2.getText().toString();
+player3_name = editTxtPlayer3.getText().toString();
+player4_name = editTxtPlayer4.getText().toString();
 		 		
 		 		
-				if(player1_name.equals("")||player2_name.equals("")||player3_name.equals("")||player4_name.equals("")){
+if(player1_name.equals("")||player2_name.equals("")||player3_name.equals("")||player4_name.equals("")){
 					
-					Toast toast = Toast.makeText(getBaseContext(), "Enter player names!", 8000);
-					toast.show();
+Toast toast = Toast.makeText(getBaseContext(), "Enter player names!", 8000);
+			toast.show();
 					
-				}else{
-					setContentView(R.layout.rmcsgnew);	
-					 // Create the adView
-				    AdView adView = new AdView(RajaMantri.this, AdSize.BANNER, "a14e156523d01de");
-				    // Lookup your LinearLayout assuming it’s been given
-				    // the attribute android:id="@+id/mainLayout"
-				    LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayout);
+				}
+else
+   {
+		setContentView(R.layout.rmcsgnew);	
+					// Create the adView
+AdView adView = new AdView(RajaMantri.this, AdSize.BANNER, "a14e156523d01de");
+// Lookup your LinearLayout assuming it’s been given
+				    
+android:id="@+id/mainLayout"
+				   LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayout);
 				    // Add the adView to it
 				    layout.addView(adView);
 				    // Initiate a generic request to load it with an ad
@@ -271,7 +274,7 @@ public class rajamantri extends Activity {
 			 		
 			 		
 			 		
-					txtPlayer1 = (TextView) findViewById(R.id.txtPlayer1);
+txtPlayer1 = (TextView) findViewById(R.id.txtPlayer1);
 					txtPlayer1.setText("1."+player1_name + " [" + p1score + "]");
 					
 					txtPlayer2 = (TextView) findViewById(R.id.txtPlayer2);
