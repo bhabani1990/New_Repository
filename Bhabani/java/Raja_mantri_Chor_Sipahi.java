@@ -291,21 +291,26 @@ txtPlayer1 = (TextView) findViewById(R.id.txtPlayer1);
 				btnPlay.setOnClickListener(new OnClickListener() {
 		 			
 		 			public void onClick(View v) {
-		 				// TODO Auto-generated method stub
+		 	// TODO Auto-generated method stub
 		 				
-		 				if(btnPlay.getText().equals("SHUFFLE")){
+		 if(btnPlay.getText().equals("SHUFFLE")){
 		 				
-		 					RajaMantri.this.shuffle();
+		 RajaMantri.this.shuffle();
 		 					
-		 				}else{
+	}
+else
+{
 		 					
 		 					
-		 					RajaMantri.this.makeGuess();
+RajaMantri.this.makeGuess();
 										
-		 					Log.v("RajaMantri", "########## Player Name:" + player1_name +" Role:" + player1_role);
-		 					Log.v("RajaMantri", "########## Player Name:" + player2_name +" Role:" + player2_role);
-		 					Log.v("RajaMantri", "########## Player Name:" + player3_name +" Role:" + player3_role);
-		 					Log.v("RajaMantri", "########## Player Name:" + player4_name +" Role:" + player4_role);
+Log.v("RajaMantri", "########## Player Name:" + player1_name +" Role:" + player1_role);
+		 					
+Log.v("RajaMantri", "########## Player Name:" + player2_name +" Role:" + player2_role);
+		 					
+Log.v("RajaMantri", "########## Player Name:" + player3_name +" Role:" + player3_role);
+		 					
+Log.v("RajaMantri", "########## Player Name:" + player4_name +" Role:" + player4_role);
 						}
 						
 		 				
@@ -482,7 +487,7 @@ txtPlayer1 = (TextView) findViewById(R.id.txtPlayer1);
 						
 						RajaMantri.guess = false;
 						btnPod3.setBackgroundResource(R.drawable.podopen);
-						btnPod3.setText("SIPAHI");
+     btnPod3.setText("SIPAHI");
 						
 					}
 					btnPod1.setClickable(false);
